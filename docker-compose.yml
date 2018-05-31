@@ -21,15 +21,6 @@ services:
       depends_on:
         - mysql
 
-### PHP-CLI Container #######################################
-
-    php-cli:
-      build:
-        context: ./php-cli
-      volumes:
-        - ../www:/var/www/html
-      tty: true
-
 ### Nginx Server Container ##################################
 
     nginx:
@@ -53,15 +44,6 @@ services:
         - "3306:3306"
       environment:
         - MYSQL_ROOT_PASSWORD=123456
-
-### PHPMyAdmin Container #########################################
-
-    phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      ports:
-        - "8080:80"
-      links:
-          - mysql:db
 
 ### Volumes Setup ###########################################
 
