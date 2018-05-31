@@ -1,13 +1,13 @@
 FROM php:7.2-fpm
 
 RUN apt-get update \
-    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd \
-    && :\
-    && apt-get install -y libicu-dev \
-    && docker-php-ext-install intl \
-    && :\
+#    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
+#    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+#    && docker-php-ext-install gd \
+#    && :\
+#    && apt-get install -y libicu-dev \
+#    && docker-php-ext-install intl \
+#    && :\
     && apt-get install -y libxml2-dev \
     && apt-get install -y libxslt-dev \
     && docker-php-ext-install soap \
@@ -29,9 +29,9 @@ RUN apt-get update \
     && docker-php-ext-install sockets \
     && docker-php-ext-install gettext \
     && docker-php-ext-install shmop \
-    && docker-php-ext-install sysvmsg \
-    && docker-php-ext-install sysvsem \
-    && docker-php-ext-install sysvshm \
+#    && docker-php-ext-install sysvmsg \
+#    && docker-php-ext-install sysvsem \
+#    && docker-php-ext-install sysvshm \
     && docker-php-ext-install opcache
     #&& docker-php-ext-install pdo_firebird \
     #&& docker-php-ext-install pdo_dblib \
